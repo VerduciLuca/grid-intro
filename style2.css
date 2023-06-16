@@ -1,0 +1,56 @@
+body * {
+    box-sizing: border-box;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 8px;
+}
+
+body {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+   gap: 6px;
+    display: grid;
+    height: 800px;
+    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header top-right"
+    "bottom-left main top-right"
+    "bottom-left footer footer";
+    text-align: center;
+    
+}
+
+header {
+    background-color: red;
+    grid-area: header;
+}
+
+main {
+align-self: center;
+justify-self: center;
+/* Self per agire solo su quella parte */
+
+    background-color: orange;
+    grid-area: main;
+    width: 80px;
+    height: 80px;
+}
+
+.top-right {
+    background-color: violet;
+    grid-area: top-right;
+}
+
+.bottom-left {
+    background-color: rgb(0, 196, 0);
+    grid-area: bottom-left;
+}
+
+footer {
+    background-color: yellow;
+    grid-area: footer;
+}
